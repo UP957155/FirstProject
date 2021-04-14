@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+
+<!--<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+    <style>
+        *{border-radius: 0px !important}
+    </style>
+</head>
+<body>
+    <h1>Change picture for <%= item[0].f_dog_name %>'s profile</h1>
+    
+  
+    <form action="http://localhost:8080/event/change/female/<%= item[0].f_id %>" method="POST"  enctype="multipart/form-data" >
+<label for="m_image" >Your photo</label>
+         
+      <div>
+            <input type="file" accept="image/png, image/jpeg" name="m_image" value="" >
+        </div>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Save" >
+    </div>
+</form>
+<a href="http://localhost:8080/event/edit/female/<%= item[0].f_id %>">I don't want to change my image</a>
+</body>
+</html>

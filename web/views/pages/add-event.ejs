@@ -1,0 +1,115 @@
+<html>
+<head>
+  <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+
+<!--<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
+        *{border-radius: 0px !important;
+          font-family: 'Comic Neue', cursive;
+        }
+        body{
+          display: flex;
+          align-items: center;
+       flex-wrap: wrap;
+        flex-direction: column;
+        
+        }
+        .form-group row{
+          display: flex;
+          align-items: center;
+       flex-wrap: wrap;
+        
+        }
+        #line{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+        label{
+          display: flex;
+          justify-content: center;
+        }
+        #l{
+          display: flex;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add your male dog</h1>
+    <a href="/male">GO BACK</a>
+    <form action="http://localhost:8080/event/add/male" method="POST"  enctype="multipart/form-data">
+    <input type="hidden" name="m_id" value="">
+    <div id="line">
+    <div class="form-group row">
+        <label for="m_email" >write your email</label>
+        <div id="l">
+            <input type="email" name="m_email" value=""  required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m_fb" >your facebook (You can paste url of your view facebook profile)</label>
+        <div id="l">
+            <input type="url" name="m_fb" value="" >
+        </div>
+      </div>
+    <div class="form-group row">
+      <label for="m_dog_name" >name of your dog</label>
+      <div id="l">
+          <input type="text" name="m_dog_name" value=""  required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="m_password" >your password</label>
+      <div id="l">
+          <input type="password" name="m_password" value=""  required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <p>You can specify period for you are available to meet:</p>
+        <label for="m_start_date" >start day</label>
+        <div id="l">
+            <input type="date" name="m_start_date" value="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m_end_date" >end day</label>
+        <div id="l">
+            <input type="date" name="m_end_date" value="" >
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="m_desc" >Tell to others something about your dog 😊</label>
+        <div id="l">
+            <textarea id="e_desc" name="m_desc" maxlength="3000" rows="15" cols="50"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m_location" >your city</label>
+        <div id="l">
+            <input type="text" name="m_location" value=""  required>
+        </div>
+      </div>
+      <label for="m_image" >choose photo for profile</label>
+         
+      <div id="l">
+            <input type="file" accept="image/png, image/jpeg, image/webp" name="m_image" value="" >
+        </div>
+    </div>
+    
+    <div id="l">
+        <input type="submit" name="submit" value="CREATE PROFILE" >
+    </div>
+  </div>
+    </form>
+    
+</body>
+</html>

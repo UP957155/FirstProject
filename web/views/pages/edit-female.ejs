@@ -1,0 +1,71 @@
+<html>
+<head>
+  <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+
+<!--<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <h1>EDIT <%= item[0].f_dog_name %>'s profile</h1>
+    <a href="/event/change/female/ <%= item[0].f_id %>" ><img src="http://localhost:8080/<%= item[0].m_image %>" alt="<%= item[0].f_dog_name %>" width="100" height="100"></a>
+    <form action="http://localhost:8080/event/edit/female/<%= item[0].f_id %>" method="POST" class="col s12">
+    <input type="hidden" name="f_id" value="<% item[0].f_id %>">
+    <div class="form-group row">
+        <label for="f_email" >Your email</label>
+        <div>
+            <input type="email" name="f_email" value="<%= item[0].f_email %>" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="f_fb" >Your facebook</label>
+        <div>
+            <input type="url" name="f_fb" value="<%= item[0].f_fb %>" >
+        </div>
+      </div>
+    <div class="form-group row">
+      <label for="f_dog_name" >Name</label>
+      <div>
+          <input type="text" name="f_dog_name" value="<%= item[0].f_dog_name %>" >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="f_password" >Password</label>
+      <div>
+          <input type="text" name="f_password" value="<%= item[0].f_password %>"  required>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="f_start_date" >Start Date</label>
+        <div>
+            <input type="date" name="f_start_date" value="<%= item[0].f_start_date %>" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="f_end_date" >End Date</label>
+        <div>
+            <input type="date" name="f_end_date" value="<%= item[0].f_end_date %>" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="f_desc" >Tell to others something about your honey 😊</label>
+        <div>
+            <textarea id="f_desc" name="f_desc" maxlength="3000" rows="15" cols="50" value=""><%= item[0].f_desc %></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="f_location" >Laction</label>
+        <div>
+            <input type="text" name="f_location" value="<%= item[0].f_location %>" >
+        </div>
+       
+      <div>
+        <input type="submit" name="submit" value="CONFIRM" >
+    </div>
+    </form>
+    <a href="/event/delete/female/ <%= item[0].f_id %>" >DELETE profile</a>
+</body>
+</html>

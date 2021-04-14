@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+<!--<link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <p>For edit <%= item[0].m_dog_name %>'s profile write here the password:</p>
+    <form action="http://localhost:8080/login/male/<%= item[0].m_id %>" method="POST" >
+    <input type="hidden" name="m_password" value="<%= item[0].m_password%>">
+    <p><%= message %></p>
+    <input type="password" name="m_password1" value="">
+    <br>
+    <input type="submit" name="submit" value="Login">
+</form>
+</body>
+</html>

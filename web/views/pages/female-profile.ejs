@@ -1,0 +1,44 @@
+<html>
+<head>
+  <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+<!--
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <h1><%= item[0].f_dog_name %>'s profile</h1>
+    <a href="/login/female/<%= item[0].f_id %>" >Edit</a>
+    <a href="/female" >Female list</a>
+    <p type="hidden" name="f_id" value="<% item[0].f_id %>"></p>
+    <img src="http://localhost:8080/<%= item[0].m_image %>" alt="<%= item[0].f_dog_name %>" width="500" height="500">
+        <div>
+            <li><a id="email" href="mailto:<%= item[0].f_email%>">SEND EMAIL</a></li>
+        </div>
+        <div>
+            <li><a id="fb" rel="external" href="<%= item[0].f_fb %>"><img src="https://media.giphy.com/media/1FlPbQaf7MXLy/giphy.gif" alt="" width="30" height="30"></a></li>
+        </div>
+    <div>
+      <p for="f_dog_name">Name</p>
+          <p name="f_dog_name"><%= item[0].f_dog_name %></p>
+    </div>
+    <div>
+        <p for="f_start_date">I can meet up from:</p>
+            <p name="f_start_date"><%= item[0].f_start_date %></p>
+      </div>
+      <div>
+        <p for="f_end_date">to:</p>
+            <p name="f_end_date"><%= item[0].f_end_date %></p>
+      </div>
+      <div>
+        <p for="f_desc">Details about dog</p>
+            <p id="f_desc" name="f_desc" ><%= item[0].f_desc %></p>
+      </div>
+      <div>
+        <p for="f_location">Laction</p>
+            <p  name="f_location" ><%= item[0].f_location %></p>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<head>
+    <link rel='icon' href='https://media.giphy.com/media/ky8MLJ5ULGnjelwvCS/giphy.gif' type='image/x-icon'/>
+    <title>WOOF</title>
+    <meta charset="UTF-8">
+
+<!--
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
+        body{
+            font-family: 'Comic Neue', cursive;
+            display: flex;
+            background-image: url(https://media.giphy.com/media/l1Oo1N7LSmIy0a2d3W/giphy.gif);
+        background-size: 50px 50px;
+        align-items: center;
+       flex-wrap: wrap;
+        flex-direction: column;
+
+            }
+        img{border-radius: 10% !important}
+        #textarea{border-radius: 1% !important;
+        color: black;
+       border: double 2px black;
+        padding: 5px;
+    }
+ 
+   
+    img{
+        object-fit: fill;
+        object-position: left;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    img:hover{
+        box-shadow: none;
+        opacity: 0.8;
+    }
+    div #main{
+        background-color: yellow;
+        color: black;
+        width: 90%;
+       border-radius: 5px;
+        box-shadow: 0 5px 30px black;
+        display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 4em;
+    }
+    ul{
+        color: black;
+        
+        
+        padding: 15px;
+        text-decoration: none;
+        
+        list-style: none;
+        object-position: right;
+    }
+#email{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    box-shadow:  0 0 10px black;
+    border: 2px double black;
+    padding: 8px;
+}
+#fb{
+    
+    margin: 1rem;
+}
+h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.navigation{
+    display: inline-block;
+}
+.navbar-brand{
+    color: black;
+    font-size: 70px;
+    text-shadow: 0 0 5px black;
+}
+#dog{
+    margin: 0;
+    border: none;
+    object-position: none;
+}
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 class="navbar-brand" style="color:black;">MALE DOGS</h1>
+    </div>
+   
+
+
+    <div class="navigation">
+       <a href="event/add/female" class="btn btn-success btn-lg">Add female dog</a>
+       <br>
+       <a href="event/add/male" class="btn btn-success btn-lg">Add male dog</a>
+       <br>
+       <a href="/female">GO TO FEMALE LIST</a>
+    </div>
+
+<br>
+<div>
+<% if (items.length > 0){ %>
+<% for(let i = 0; i < items.length; i++){ %>
+    <br>
+    <div>
+        <div>
+            <a id="img" href="/male/ <%= items[i].m_id %>"><img src="<%= items[i].m_image %>" alt="<%= items[i].m_dog_name %>" width="200" height="200" sizes=""></a>
+        <br>
+        <p><%= items[i].m_dog_name %></p>
+        <br>
+        </div>
+    <% } %>
+    <% } else { %>
+         <h1>There are not any profiles</h1>
+       <% } %>
+</div>
+</body>
+</html>
